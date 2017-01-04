@@ -1,91 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <style>
-            div.container {
-                width: 100%;
-                border: 1px solid gray;
-                height: 100%;
-                background-color: #9177B9;
-                -moz-box-shadow: 0 0 10px #777777;
-              -webkit-box-shadow: 0 0 10px #777777;
-              box-shadow: 0 0 10px #777777;
-                 font-family: "verdana", sans-serif;
-            }
-            header {
-                padding: 1px;
-                color:aliceblue;
-                background-color: #361F59;
-                clear: left;
-                text-align: center;
-                height: 150px;
-                text-align: center;
-                padding-top: 50px;
-                -moz-box-shadow: 0 0 10px #777777;
-              -webkit-box-shadow: 0 0 10px #777777;
-              box-shadow: 0 0 10px #777777;
-                
-            }
-            nav {
-                float: left;
-                max-width: 160px;
-                margin:0;
-                padding: 1px;
-                background-color: #A6AA9E;
-                  -moz-box-shadow: 0 0 10px #777777;
-              -webkit-box-shadow: 0 0 10px #777777;
-              box-shadow: 0 0 10px #777777;
-            }
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            nav ul a {
-                text-decoration: none;
-                padding: 10px 10px 10px;
-                border: 1px black;
-                color: #807615;
-            }
-            nav ul li {
-                padding: 10px 10px 10px;
-            }
-            
-            article {
-                margin-left: 170px;
-              
-                padding: 1px;
-                overflow: hidden;
-                height: 700px;
-                background-color: #ADACA5;
-                       -moz-box-shadow: 0 0 10px #777777;
-              -webkit-box-shadow: 0 0 10px #777777;
-              box-shadow: 0 0 10px #777777;
-            }
-            p {
-                padding: 10px 10px 10px 10px;
-            }
-            h1 {
-                text-align: center;
-                font-size: 50px
-            }
-        
+            body {margin:0;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
         </style>
     </head>
-    <div class="container">
-    <header>
-        <h1>Jesus O. Franco</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
+    <body>
+    <ul class="topnav" id="myTopnav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="icon">
+        <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+        </li>
         </ul>
-    </nav>
-    <article>
-        <h1>Welcome!</h1>
-        <p>My name is Jesus Franco. I am a Junior at Boston University majoring in Computer Science. At the moment I am pursuing my bachelors degree at BU. My related interests include discrete mathematics and Computer Languages. On my free time I enjoy learning new things and starting new projects..</p>
-        </article>
-    </div>
+        <script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+    </body>
 </html>
