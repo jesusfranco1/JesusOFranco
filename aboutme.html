@@ -1,60 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <style>
-            div.container {
-                width: 100%;
-                border: 1px solid gray;
-                height: 100%;
+            body {
+            margin:0px;
+            background-image: url("backaboutme.png");
+            font-family: sans-serif;
             }
-            header {
-                padding: 1px;
-                color:aliceblue;
-                background-color: black;
-                clear: left;
-                text-align: center;
-                height: 100px;
-            }
-            nav {
-                float: left;
-                max-width: 160px;
-                margin:0;
-                padding: 1px;
-            }
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
-            nav ul a {
-                text-decoration: none;
-            }
-            
-            article {
-                margin-left: 170px;
-                border-left: 1px solid;
-                padding: 1px;
-                overflow: hidden;
-            }
-            p {
-                padding: 10px 10px 10px 10px;
-            }
-        
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
         </style>
     </head>
-    <div class="container">
-    <header>
-        <h1>Jesus O. Franco</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Resume</a></li>
+    <body>
+        <ul class="topnav" id="myTopnav">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+            </li>
         </ul>
-    </nav>
-    <article>
-        <h1>Welcome!</h1>
-        <p>My name is Jesus Franco. I am a Junior at Boston University majoring in Computer Science. At the moment I am pursuing my bachelors degree at BU. My related interests include discrete mathematics and Computer Languages. On my free time I enjoy learning new things and starting new projects.</p>
-        </article>
-    </div>
+        <div class="p1">
+            <h2>About me:</h2>
+            <p>Thank you for your interest! I am currently a junior at Boston University. I am a first generation student studying computer science. On my free time I enjoy learning interesting topics in computer science such as computer languages, networks, and discrete mathematics. I also enjoy solving puzzles; especially sudoku. 
+            </p>
+            <p> I am a proud Texan, born and raised in Houston! But I love to explore and see new scenery - one of the many reasons I chose to attend BU.</p>
+            <p> I also love nature. To be more specific - horticulture. I love plants, especially trees! One of my favorite tree native to Texas is the great Southern Live Oak for its longlivety and dense wood!</p>
+            
+            <p>I will be the first to graduate from a 4 year university in my family. I am passionate about equality in education and me graduating is an example for my family and those around me who also have aspirations to go to college and find quality education!</p>
+        </div>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+</script>
+    </body>
 </html>
