@@ -6,7 +6,7 @@
         <style>
             body {
             margin:0px;
-            background-color: aliceblue;
+            background-color: #EEE;
             font-family: sans-serif;
             text-align: center;
             }
@@ -15,7 +15,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                background-color: rgba(51,51,51,0.6);
+                background-color: rgba(51,51,51,1);
                 width: 100%;
             }
 
@@ -67,8 +67,8 @@
   <body>
       <ul class="topnav" id="myTopnav">
         <li><a class="active" href="index.html">Jesus O. Franco</a></li>
-        <li><a href="#news">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="aboutme.html">About</a></li>
         <li class="icon">
         <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
@@ -93,6 +93,17 @@
       </div>
       <h2> Currently Under Construction! :D</h2>
       <p> More to come as I get the time! :D :D </p>
+      
+       <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+      </script>
     
  </body>
         
