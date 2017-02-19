@@ -5,8 +5,9 @@
         <style>
             body {
             margin:0px;
-            background-color: black;
+            background-color: aliceblue;
             font-family: sans-serif;
+            overflow-y: hidden;
             }
 ul.topnav {
   list-style-type: none;
@@ -59,7 +60,6 @@ ul.topnav li.icon {display: none;}
   }
 }
             .p1{
-                background-color: aliceblue;
                 padding: 100px;
                 height: 100%;
                 text-align: center;
@@ -79,9 +79,10 @@ ul.topnav li.icon {display: none;}
                 height: 40px;
                 width: 140px;
                padding:10px 1px 1px 1px;
-                    -moz-box-shadow: 0 0 10px #777777;
+                -moz-box-shadow: 0 0 10px #777777;
                 -webkit-box-shadow: 0 0 10px #777777;
-                box-shadow: 0 
+                box-shadow: 0;
+            
             }
             .p2 {
                 color: rebeccapurple;
@@ -93,18 +94,16 @@ ul.topnav li.icon {display: none;}
             .p3 {
                 padding: 1px;
                 text-align: center;
-                height: 100%;
+                height: 190px;
                 background-color: gray;
                 color: aliceblue;
                 text-decoration: none;
+                position: fixed;
+                width: 100%;
+                bottom: 0px;
+            
             }
             
-            .p4 {
-                padding-top: 100px;
-                padding-bottom: 100px;
-                background-color: aliceblue;
-                height: 600px;
-            }
             .li {
                 text-decoration: none;
             }
@@ -143,10 +142,6 @@ ul.topnav li.icon {display: none;}
         <p>Currenlty Taking CS330: Algorithms and CS350: Fundamentals in Computer Systems.</p>
         <p>Click here for a list of previous Computer Science courses I have taken.</p>
         <p>For my hobbies and interest, click on the About Me tab.</p>
-    </div>
-        
-    <div class="p4">
-        
     </div>
     
 <script>
