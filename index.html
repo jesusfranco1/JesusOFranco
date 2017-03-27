@@ -61,10 +61,17 @@ ul.topnav li.icon {display: none;}
 }
             .p1{
                 padding: 100px;
-                height: 300px;
+                height: 100%;
                 text-align: center;
                 color: 	#191970;
                 font-weight: lighter;
+            }
+            .twitter {
+                   background-color: black;
+                position: absolute;
+                top:48px;
+                right: 0px;
+                height: 100%;
             }
             
             a.button {
@@ -131,6 +138,7 @@ ul.topnav li.icon {display: none;}
                 height:250px;
                 float: left;
             }
+         
         </style>
     </head>
     <body>
@@ -147,14 +155,15 @@ ul.topnav li.icon {display: none;}
         <h2>Jesus Orlando Franco</h2>
        <a href="aboutme.html" class="button">About Me</a>
         <a href="index2.html" class="button">Resume</a>
+        <div class="twitter">
+            <a class="twitter-timeline" data-width="300" data-height="1000" data-theme="dark" href="https://twitter.com/jesusfranco341">Tweets by jesusfranco341</a> 
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        
     </div>
    
-    <div class="p3">
-        <h2>A Computer Scientist at Boston University. </h2>
-        <p>Currenlty Taking CS330: Algorithms and CS350: Fundamentals in Computer Systems.</p>
-        <p>Click here for a list of previous Computer Science courses I have taken.</p>
-        <p>For my hobbies and interest, click on the About Me tab.</p>
-    </div>
+
+        
     
 <script>
 function myFunction() {
@@ -165,6 +174,13 @@ function myFunction() {
         x.className = "topnav";
     }
 }
+    twttr.widgets.createTimeline(
+  {
+    sourceType: "profile",
+    screenName: "jesusfranco341"
+  },
+  document.getElementById("container")
+);
 </script>
     </body>
 </html>
