@@ -57,17 +57,40 @@ ul.topnav li.icon {display: none;}
 }
             
             .p1 {
-                text-align: center;
+
+                color: gray;
             }
             
             .p2 {
+                 color: gray;
                 height: 20px;
-                text-align: center;
+                width: 40%;
+                float:right; 
+            }
+            .webdev {
+                color: gray;
+                margin-top: 150px;
+                width: 40%;
+                height: 100px;
+                float:right;
             }
             
+            .int {
+                color: gray;
+                margin-top: 150px;
+                margin-left: 300px;
+                width: 40%;
+                height: 100px;
+                float:right;
+            }
             
             img.me {
-                margin:0px auto;
+                 position: absolute;
+                width: 300px;
+                left: 10px;
+                top: 49px;
+                float: left;
+                margin-left: 100px;
                 display: block;
                 -moz-box-shadow: 0 0 10px #777777;
                 -webkit-box-shadow: 0 0 10px #777777;
@@ -77,13 +100,13 @@ ul.topnav li.icon {display: none;}
                 position: relative;
                 width: 250px; 
                 height:250px;
-                float: center;
+                float: left;
             }
         </style>
     </head>
     <body>
         <ul class="topnav" id="myTopnav">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Jesus O. Franco</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="aboutme.html">About</a></li>
@@ -98,12 +121,23 @@ ul.topnav li.icon {display: none;}
         
         
         
-         <div class="p2">
-      
+    <div class="p2">
+
         
-        <h3>Intro</h3>
-        <p>I am a Computer Science Major at Boston University. I am currently a junior looking for an internship. Please feel free to brouse trough.</p>
+        <h1>Hey There!</h1>
+        <p>I am a Computer Science Major at Boston University. I am currently a junior looking for an internship.</p>
+             
+        
     </div>
+    <div class="webdev">
+        <h1>Me and html + CSS</h1>
+        <p>Who doesn't enjoy some creativity? On my free time I enjoy working on web development. It allows me to be creative in a modern way. I enjoy experimenting with different styles!</p>
+        </div>
+        
+        <div class="int">
+            <h1>Me and the Internet</h1>
+            <p>I am fascinated by artificial inteligence, the internet of things, and Software Engineering</p>
+        </div>
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
